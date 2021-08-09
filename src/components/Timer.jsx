@@ -31,11 +31,11 @@ const Timer = () => {
     if (on && time > 0) {
       countdown = setInterval(() => {
         dispatch(decrementTime());
-      }, 100);
+      }, 1000);
     } else if (on && time === 0) {
       countdown = setInterval(() => {
         dispatch(decrementTime());
-      }, 100);
+      }, 1000);
       audioElement.current.play();
       if (type === "Session") {
         dispatch(switchBreak());

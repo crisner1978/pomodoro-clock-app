@@ -45,7 +45,7 @@ const timeSlice = createSlice({
       state.interval = "Session";
       state.timeLeft = state.sessionTime * 60;
     },
-    decrementTime(state) {
+    decrementTime(state, action) {
       state.timeLeft -= 1;
     },
   },
