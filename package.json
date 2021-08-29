@@ -1,4 +1,4 @@
-{ 
+{
   "homepage": "http://crisner1978.github.io/pomodoro-clock-app",
   "name": "pomodoro-clock-app",
   "version": "0.1.0",
@@ -12,8 +12,10 @@
     "moment-duration-format": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
