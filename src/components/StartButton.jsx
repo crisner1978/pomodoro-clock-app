@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+// import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { stopTimer, startTimer, timerOn } from "../toolkit/timeSlice";
 
 const StartButton = () => {
-  const [color, setColor] = useState("");
-
   const on = useSelector(timerOn);
   const dispatch = useDispatch();
-
+  
   const onClick = () => {
     on ? dispatch(stopTimer()) : dispatch(startTimer());
-    setColor(!color);
   };
 
   return (
     <Button
-      style={{ backgroundColor: color ? "#A40000" : "#00AB66" }}
+      style={{ backgroundColor: on ? "#a40000" : "#00AB66"}}
       id="start_stop"
       onClick={onClick}
     >
@@ -37,18 +34,18 @@ const Button = styled.button`
   height: 50px;
   color: #fff;
   border: none;
+  /* background-color: off #00AB66; on #a40000 */
   font-size: 20px;
-  transition: 0.3s ease-in all;
+  transition: 0.2s ease-in all;
   cursor: pointer;
 
   &:hover {
-    background: transparent;
     transition: ease-in 0.3s all;
     transform: scale(1.05);
   }
   &:active {
     transform: scale(0.95);
-    transition: 0.3s ease-in all;
+    transition: 0.2s ease-in all;
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   }
 

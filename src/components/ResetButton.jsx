@@ -5,8 +5,12 @@ import { resetTimer } from "../toolkit/timeSlice";
 const ResetButton = () => {
   const dispatch = useDispatch();
 
+  const handleClick =()=>{
+    dispatch(resetTimer());
+  }
+
   return (
-    <Button className="btn" id="reset" onClick={() => dispatch(resetTimer())}>
+    <Button className="btn" id="reset" onClick={handleClick}>
       RESET
     </Button>
   );
@@ -26,7 +30,7 @@ const Button = styled.button`
   color: #a40000;
   border: 3px solid #a40000;
   font-size: 20px;
-  transition: 0.3s ease-in all;
+  transition: 0.2s ease-in all;
   cursor: pointer;
 
   &:hover {
@@ -37,7 +41,7 @@ const Button = styled.button`
   }
   &:active {
     transform: scale(0.95);
-    transition: 0.3s ease-in all;
+    transition: 0.2s ease-in all;
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   }
 
